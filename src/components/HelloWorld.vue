@@ -1,10 +1,16 @@
 <template>
   <div>
+    <h1> MASTER LIST OF NOTIFICATIONS </h1>
     <ol>
       <li v-for="(notification, idx) in notifications" :key="idx">
         {{notification.name}}
       </li>
       </ol>
+      <br/>
+      <form @submit="addNotification(name)">
+    <input v-model="name" placeholder="Notification Name">
+    <button type="submit">Add New Location</button>
+</form>
 </div>
 </template>
 
