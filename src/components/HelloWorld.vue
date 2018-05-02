@@ -14,13 +14,20 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      notifications: []
+      notifications: [],
+      name: ""
     };
   },
   firestore() {
     return {
       notifications: db.collection("notifications")
     };
+  },
+  methods: {
+    addNotification(name) {
+      const date = new Date();
+      db.collection("notifications").add({ name, date });
+    }
   }
 };
 </script>
