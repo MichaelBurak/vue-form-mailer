@@ -9,7 +9,7 @@
       <br/>
       <form @submit="addNotification(name)">
     <input v-model="name" placeholder="Notification Name">
-    <button type="submit">Add New Location</button>
+    <button type="submit">Add New Notification</button>
 </form>
 </div>
 </template>
@@ -17,7 +17,7 @@
 <script>
 import { db } from "../main";
 export default {
-  name: "HelloWorld",
+  name: "Notifications",
   data() {
     return {
       notifications: [],
